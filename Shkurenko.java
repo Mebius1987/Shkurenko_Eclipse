@@ -282,7 +282,7 @@ public class Shkurenko {
 		GregorianCalendar g = new GregorianCalendar();
 		g.add(GregorianCalendar.DAY_OF_YEAR, N);
 		System.out.println(g.getTime());
-		*/
+		
 		// 19. В зале у главного тренера Вячеслава занимается N спортсменов.
 		// Каждому из них Вячеслав в конце тренировки выдаёт 1 порцию гейнера, а
 		// если вес спортсмена менее 80 кг - то дополнительно ещё 1 порцию
@@ -292,7 +292,22 @@ public class Shkurenko {
 		// каждый день, для двух условий:
 		// а) если в зале 100% всех спортсменов - дрищи (вес меньше 80 кг)
 		// б) если в зале 60% всех спортсменов - дрищи (вес меньше 80 кг)
-
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Введите количество спортсменов");
+		int N = sc.nextInt();
+		System.out.println("Введите вес спортсмена(условие 100% или 60 %)");
+		double m = sc.nextDouble();
+		if (m < 80){
+			double a = (N *3)/0.9;
+			a= new BigDecimal(a).setScale(0, RoundingMode.UP).doubleValue();
+			System.out.println("Если все спортсмены дрищи то потратим "+(int)a + " пакета молока");
+		}
+		double a = ((N * 0.6)*3)/0.9;// Дрищи
+		double b = (N * 0.4)/0.9;//норм качки 
+		double c = a + b;//всего молока
+		c = new BigDecimal(c).setScale(0, RoundingMode.UP).doubleValue();
+		System.out.println("Если все же не все дрищи то мы потратим " + (int)c + " пакета молока");
+		*/
 	}
 
 }
