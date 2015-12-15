@@ -1,6 +1,7 @@
 package Shkurenko;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -178,21 +179,63 @@ public class Shkurenko {
 		double film = sc.nextDouble();
 		System.out.println("Введите скорость интернет-соеденения в битах в секунду");
 		int skorost = sc.nextInt();
-		*/
+		if(film > 0 && skorost > 0){
+			double filmb = film * 1024*1024*1024;// количество бит в фильме
+			double ras41 = (filmb /skorost);// количество секунд за которые скачается фильм 
+			double ras4 =  ras41/60/60;//вычисляем количество часов
+			double rasm = (ras41 - ras4);
+
+			
+			
+			System.out.println("Фильм размером " + film + " который качается со скоростью " + skorost + " байс/с скачается за " +(int) ras4 + " часа, " + rasm + " минут");
+		}
+		
 		// 11. Пользователь вводит с клавиатуры объем флешки в гигабайтах.
 		// Посчитать, сколько на нее поместится фильмов размером 760 Мбайт.
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Введите размер флешки в гигабайтах");
 		double flesh = sc.nextDouble();
-		if ()
+		if (flesh > 0 ){
+			flesh = flesh * 1024 / 760;
+			System.out.println("На флешку поместиться " + (int)flesh + " фильмов размером 760 Мбайт");
+		}
+		System.out.println("Сильно маленький размер флешки");
+		
 		// 12. Пользователь вводит с клавиатуры дробное число. Округлить его до
 		// двух знаков после запятой и вывести на экран.
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Введите дробное число");
+		double first = sc.nextDouble();
+		first = new BigDecimal(first).setScale(2, RoundingMode.UP).doubleValue();
+		System.out.println(first);
+		
 		// 13. Преподаватель вводит с клавиатуры количество студентов, сдавших
 		// домашние задание, и количество «должников». Посчитать, сколько
 		// процентов составляют «должники» от общего числа студентов.
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Введите количество студентов сдавших домашние задание");
+		int sdali = sc.nextInt();
+		System.out.println("Введите количество студентов должников");
+		int dolg = sc.nextInt();
+		if (sdali > 0 && dolg > 0){
+			double a = (double) (100* dolg)/(dolg + sdali);
+			System.out.println("Должники состовляют " + a + " процентов от общего числа студентов");
+		}
+		System.out.println("Число учеников не может быть отрицательным");
+		
 		// 14. Пользователь вводит с клавиатуры время в секундах, прошедшее с
 		// начала дня. Определить, сколько времени (часов, минут и секунд)
 		// осталось до полуночи.
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Сколько врмени прошло с начала дня в секундах");
+		int sec = sc.nextInt();
+		int na4 = 9*60*60;// начало дня в 9 утра
+		int a = (24*60*60) - (na4 + sec);// сколько времени осталось до полуночи
+		double b = a /60/60;//час
+		double min = (a - (b * 60 * 60))/60;//минуты
+		double secf = a - ((b * 60 * 60) + (min * 60));
+		System.out.println("Времени осталось до полуночи" + (int) b + " часов " + (int) min + " минут " + (int) secf + " секунды");
+		*/
 		// 15. Пользователь вводит с клавиатуры объем одного фильма в
 		// гигабайтах. Посчитать, сколько дискет понадобится для переноса фильма
 		// на другой компьютер (размер дискеты считать равным 1.44 Мбайт).
