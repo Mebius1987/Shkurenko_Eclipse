@@ -278,8 +278,9 @@ public class Shkurenko {
 		// 18. Какая дата будет через N дней? Рекомендуется использование типа
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
+		System.out.println("Введите на сколько дней больше отобразить дату");
 		GregorianCalendar g = new GregorianCalendar();
-		g.add(Calendar.DAY_OF_YEAR, N);
+		g.add(GregorianCalendar.DAY_OF_YEAR, N);
 		System.out.println(g.getTime());
 		*/
 		// 19. В зале у главного тренера Вячеслава занимается N спортсменов.
