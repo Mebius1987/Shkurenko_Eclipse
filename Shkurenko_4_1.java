@@ -217,7 +217,8 @@ public class Shkurenko_4_1 {
 		double c = sc.nextDouble();
 		System.out.println("Введите четвертое число");
 		double d = sc.nextDouble();
-		int otvet = (a > b) : (a > c) : ( a > d) ? a : (b > c) : (b > d) : (b > a) ? b : (d > a) : (d > b) : (d>c) ? d;
+		double otvet = a > b | a > c |  a > d ?  a : b > a | b > c | b > d ?  b : c > a | c > b | c > d ? c : d > a | d > b | d > c ? 0 : d;
+		
 			System.out.println(otvet);
 	}
 
