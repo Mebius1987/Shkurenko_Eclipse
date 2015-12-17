@@ -183,6 +183,7 @@ public class Shkurenko_4_1 {
 		} else
 			System.out.println("Число " + a + " не является палиндромом");
 		*/
+		/*
 		// 12.​ Пользователь задаёт координаты верхнего левого, и нижнего
 		// правого угла прямоугольника, а также координаты точки (X,Y) в
 		// декартовой системе координат. Принадлежит ли точка этому
@@ -204,9 +205,20 @@ public class Shkurenko_4_1 {
 			System.out.println("Точка принадлежит прямоугольнику");
 		} else
 			System.out.println("Точка не принадлежит прямоугольнику");
+		*/
 		// 13.​ Найти максимальное значение среди 4 переменных, используя
 		// тернарный оператор.
-
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Введите первое число");
+		double a = sc.nextDouble();
+		System.out.println("Введите второе число");
+		double b = sc.nextDouble();
+		System.out.println("Введите третье число");
+		double c = sc.nextDouble();
+		System.out.println("Введите четвертое число");
+		double d = sc.nextDouble();
+		int otvet = (a > b) : (a > c) : ( a > d) ? a : (b > c) : (b > d) : (b > a) ? b : (d > a) : (d > b) : (d>c) ? d;
+			System.out.println(otvet);
 	}
 
 }
