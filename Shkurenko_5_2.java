@@ -1,5 +1,7 @@
 package Shkurenko;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,6 +9,9 @@ import java.util.Scanner;
 
 public class Shkurenko_5_2 {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		/*
@@ -89,7 +94,7 @@ public class Shkurenko_5_2 {
 		int mm1 = sc.nextInt();
 		System.out.println("Введите текущее время секунды");
 		int ss1 = sc.nextInt();
-		if (hh1 >= 0 && hh1 <= 24 && mm1 >= 0 && mm1 <=59 && ss1 >= 0 && ss1 <=59){
+		if (hh1 >= 0 && hh1 <= 23 && mm1 >= 0 && mm1 <=59 && ss1 >= 0 && ss1 <=59){
 			System.out.println("Значения введены корректно");
 		} else
 			System.out.println("Вы допустили ошибку");
@@ -115,7 +120,7 @@ public class Shkurenko_5_2 {
 			System.out.println("Билет у нас имеет 6 цифр");
 			*/
 			
-		
+		/*
 		// 6. Указать с клавиатуры пол и возраст человека. Определить, пора ли
 		// ему на пенсию.
 		System.out.println("Введите пол человека f(female) или m(man)");
@@ -123,26 +128,100 @@ public class Shkurenko_5_2 {
 		System.out.println("Введите возраст человека");
 		int voz = sc.nextInt();
 		if ((int)pol == 102){
-			if (voz > 0 && voz <56){
+			if (voz >= 0 && voz < 56){
 				System.out.println("рано еще на пенсию");
 			} else 
 				System.out.println("уже пора на пенсию");
 		} else if ((int)pol == 109){
-			if (voz > 0 && voz <61){
+			if (voz >= 0 && voz < 61){
 				System.out.println("рано еще на пенсию");
 			} else 
 				System.out.println("уже пора на пенсию");
 		}
+		*/
+		/*
 		// 7. Вводится время (часы и минуты) – программа выводит приветствие,
 		// соответствующее введённому времени (например, ввели 15 часов 6 минут
 		// – выводится приветствие «добрый день»).
+		System.out.println("Введите сколько сейчас часов");
+		int hh = sc.nextInt();
+		System.out.println("Введите сколько сейчас минут");
+		int mm = sc.nextInt();
+		if (hh < 24 && hh >= 0){
+					if (hh > 6 && hh <12){
+			System.out.println("Доброе утро");
+		}else if (hh >= 12 && hh < 18){
+			System.out.println("Добрый день");
+		}else if (hh >= 18 && hh < 23){
+			System.out.println("Добрый вечер");
+		} else 
+			System.out.println("Доброй ночи");
+		} else 
+			System.out.println("неверный формат времени");;
+			*/
+		/*
 		// 8. Программа подсчета идеального веса к росту. Ввести рост и вес,
 		// вывести сообщение о том, сколько нужно кг набрать или сбросить
 		// (идеальный вес = рост - 110).
+		System.out.println("Введите свой рост");
+		double rost = sc.nextDouble();
+		System.out.println("Введите свой вес");
+		double ves = sc.nextDouble();
+		rost = new BigDecimal(rost).setScale(2, RoundingMode.UP).doubleValue();
+		ves = new BigDecimal(ves).setScale(2, RoundingMode.UP).doubleValue();
+		double vsei = rost - 110;
+		vsei = new BigDecimal(vsei).setScale(2, RoundingMode.UP).doubleValue();
+		if (ves > 0 && rost > 0){
+		if (ves > (rost - 110)){
+			System.out.println("Вам надо сбросить " + (vsei - ves) + " кг");
+		} else if (ves < (rost - 110)){
+			System.out.println("Вам надо набрать " + (vsei - ves) + " кг");
+		} 
+		}else
+			System.out.println("рост и вес не могут быть отрицательными");
+			*/
 		// 9. Ввести любую дату (день, месяц и год вводятся по отдельности).
 		// Проверить корректность введённых значений. Вывести дату следующего
 		// дня (использовать стандартные встроенные классы Java вроде
 		// GregorianCalendar запрещено!)
+		System.out.println("Введите год");
+		int god = sc.nextInt();
+		System.out.println("Введите месяц");
+		int mes = sc.nextInt();
+		System.out.println("Введите день");
+		int den = sc.nextInt();
+		if (mes > 0 && mes <= 12 ){
+			switch (mes){
+			case 1:
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12:
+				den = 31;
+				break;
+			case 4:
+			case 6:
+			case 9:
+			case 11:
+				den = 30;
+				break;
+			case 2:
+				if (((god % 4 == 0) && !(god % 100 == 0)) || (god % 400 == 0))
+					den = 29;
+					else 
+						den = 28;
+				break;
+				default:
+					System.out.println("такого месяца нету");
+			}
+			System.out.println("Следующий день " + den);
+				
+				
+			
+			}
+		}
 		// 10. Написать программу, которая предлагает пользователю выбрать
 		// животное из списка (1 – кошка, 2 – собака и тд.), и в ответ
 		// показывает, какие звуки издаёт выбранное животное. В списке должно
@@ -192,7 +271,7 @@ public class Shkurenko_5_2 {
 		// если деньги закончились. Игра заканчивается победой, если выпадает
 		// джек-пот (7 7 7).
 	}
-}
+
 	
 
 
