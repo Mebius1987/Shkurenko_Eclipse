@@ -180,6 +180,7 @@ public class Shkurenko_5_2 {
 		}else
 			System.out.println("рост и вес не могут быть отрицательными");
 			*/
+		/*
 		// 9. Ввести любую дату (день, месяц и год вводятся по отдельности).
 		// Проверить корректность введённых значений. Вывести дату следующего
 		// дня (использовать стандартные встроенные классы Java вроде
@@ -234,11 +235,79 @@ public class Shkurenko_5_2 {
 		}
 	}
 }
-
+*/
 		// 10. Написать программу, которая предлагает пользователю выбрать
 		// животное из списка (1 – кошка, 2 – собака и тд.), и в ответ
 		// показывает, какие звуки издаёт выбранное животное. В списке должно
 		// быть хотя бы 10 животных.
+		System.out.println("Выберите животное из списка");
+		System.out.println("1)Кошка");
+		System.out.println("2)Собака");
+		System.out.println("3)Овечка");
+		System.out.println("4)Коза");
+		System.out.println("5)Утка");
+		System.out.println("6)Гусь");
+		System.out.println("7)Корова");
+		System.out.println("8)Индюк");
+		System.out.println("9)Свинья");
+		System.out.println("10)Курица");
+		System.out.println("11)Петух");
+		System.out.println("12)Лошадь");
+		System.out.println("13)Голубь");
+		int giv = sc.nextInt();
+		if (giv >= 1 && giv <= 13){
+			String zvyk;
+			switch (giv){
+			case 1: 
+				zvyk = "Мяу";
+			break;
+			case 2: 
+				zvyk = "Гав";
+			break;
+			case 3: 
+				zvyk = "Мее";
+			break;
+			case 4: 
+				zvyk = "Беее";
+			break;
+			case 5: 
+				zvyk = "Кря";
+			break;
+			case 6: 
+				zvyk = "Га";
+			break;
+			case 7: 
+				zvyk = "Мууу";
+			break;
+			case 8: 
+				zvyk = "Фууу";
+			break;
+			case 9: 
+				zvyk = "Хрю";
+			break;
+			case 10: 
+				zvyk = "Кудах";
+			break;
+			case 11: 
+				zvyk = "Кукареку";
+			break;
+			case 12: 
+				zvyk = "Рыыыи";
+				break;
+			case 13: 
+				zvyk = "Гуль";
+				break;
+			default: 
+				zvyk = "Не знаю такого";
+			break;
+			} 
+			System.out.println(zvyk + zvyk);
+
+		}else
+				System.out.println("животных у нас может быть от 1 до 13");
+			}
+		
+		
 		// 11. Написать игру "О, счастливчик!". На экране по очереди появляются
 		// вопросы, и варианты ответов. Неправильный выбор - игра окончена.
 		// Правильный ответ – переходим к следующему вопросу. Если все ответы
@@ -286,5 +355,5 @@ public class Shkurenko_5_2 {
 	
 
 	
-
+	}
 
