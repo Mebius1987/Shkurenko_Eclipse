@@ -190,38 +190,51 @@ public class Shkurenko_5_2 {
 		int mes = sc.nextInt();
 		System.out.println("Введите день");
 		int den = sc.nextInt();
-		if (mes > 0 && mes <= 12 ){
-			switch (mes){
-			case 1:
-			case 3:
-			case 5:
-			case 7:
-			case 8:
-			case 10:
-			case 12:
-				den = 31;
-				break;
-			case 4:
-			case 6:
-			case 9:
-			case 11:
-				den = 30;
-				break;
-			case 2:
-				if (((god % 4 == 0) && !(god % 100 == 0)) || (god % 400 == 0))
-					den = 29;
-					else 
-						den = 28;
-				break;
-				default:
-					System.out.println("такого месяца нету");
-			}
-			System.out.println("Следующий день " + den);
+		if (mes > 0 && mes <= 12){
+			if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 ){
+				if(den == 31){
+					System.out.println("1." + (mes+1) + "." + god );
+				} else if (den <= 31){
+					System.out.println((den +1) + "." + mes + "." + god);
+				} else
+					System.out.println("Неверный количество дней в месяце");
+					
+				} else if (mes == 4 || mes == 6 || mes == 9 || mes == 11){
+					if(den == 30){
+						System.out.println("1." + (mes+1) + "." + god );	
+					} else if (den <= 30){
+						System.out.println((den +1) + "." + mes + "." + god);
+					} else
+						System.out.println("Неверный количество дней в месяце");
+				} else if (mes == 2){
+					if (((god % 4 == 0) && !(god % 100 == 0)) || (god % 400 == 0)){
+						if (den == 29){
+							System.out.println("1." + (mes+1) + "." + god );
+						} else if (den <= 29){
+							System.out.println((den +1) + "." + mes + "." + god);
+						} else if (den == 28){
+							System.out.println("1." + (mes+1) + "." + god );
+						} else if (den <= 28){
+							System.out.println((den +1) + "." + mes + "." + god);
+						} else 
+							System.out.println("Неверный количество дней в месяце");
+					}
+				} else if (mes == 12){
+					if(den == 31){
+						System.out.println("1." + ("1.") + (god + 1) );
+					} else if (den <= 31){
+						System.out.println((den +1) + "." + mes + "." + god);
+				} else
+					System.out.println("Неверный количество дней в месяце");
+			
 				
 				
 			
 			}
 		}
+	}
+}
+
 		// 10. Написать программу, которая предлагает пользователю выбрать
 		// животное из списка (1 – кошка, 2 – собака и тд.), и в ответ
 		// показывает, какие звуки издаёт выбранное животное. В списке должно
@@ -270,7 +283,7 @@ public class Shkurenko_5_2 {
 		// например. Зациклить работу приложения. Игра заканчивается поражением,
 		// если деньги закончились. Игра заканчивается победой, если выпадает
 		// джек-пот (7 7 7).
-	}
+	
 
 	
 
