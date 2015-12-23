@@ -120,25 +120,19 @@ public class Shkurenko_5_2 {
 			System.out.println("Билет у нас имеет 6 цифр");
 			*/
 			
-		/*
+		
 		// 6. Указать с клавиатуры пол и возраст человека. Определить, пора ли
 		// ему на пенсию.
 		System.out.println("Введите пол человека f(female) или m(man)");
 		char pol = sc.next().charAt(0);
 		System.out.println("Введите возраст человека");
 		int voz = sc.nextInt();
-		if ((int)pol == 102){
-			if (voz >= 0 && voz < 56){
-				System.out.println("рано еще на пенсию");
-			} else 
-				System.out.println("уже пора на пенсию");
-		} else if ((int)pol == 109){
-			if (voz >= 0 && voz < 61){
+			if ((int)pol == 102 && voz >= 0 && voz < 56 || (int)pol == 109 && voz >= 0 && voz < 61){
 				System.out.println("рано еще на пенсию");
 			} else 
 				System.out.println("уже пора на пенсию");
 		}
-		*/
+		
 		/*
 		// 7. Вводится время (часы и минуты) – программа выводит приветствие,
 		// соответствующее введённому времени (например, ввели 15 часов 6 минут
@@ -198,7 +192,7 @@ public class Shkurenko_5_2 {
 				} else if (den <= 31){
 					System.out.println((den +1) + "." + mes + "." + god);
 				} else
-					System.out.println("Неверный количество дней в месяце");
+					System.out.println("Неверное количество дней в месяце");
 					
 				} else if (mes == 4 || mes == 6 || mes == 9 || mes == 11){
 					if(den == 30){
@@ -206,7 +200,7 @@ public class Shkurenko_5_2 {
 					} else if (den <= 30){
 						System.out.println((den +1) + "." + mes + "." + god);
 					} else
-						System.out.println("Неверный количество дней в месяце");
+						System.out.println("Неверное количество дней в месяце");
 				} else if (mes == 2){
 					if (((god % 4 == 0) && !(god % 100 == 0)) || (god % 400 == 0)){
 						if (den == 29){
@@ -218,7 +212,7 @@ public class Shkurenko_5_2 {
 						} else if (den <= 28){
 							System.out.println((den +1) + "." + mes + "." + god);
 						} else 
-							System.out.println("Неверный количество дней в месяце");
+							System.out.println("Неверное количество дней в месяце");
 					}
 				} else if (mes == 12){
 					if(den == 31){
@@ -226,7 +220,7 @@ public class Shkurenko_5_2 {
 					} else if (den <= 31){
 						System.out.println((den +1) + "." + mes + "." + god);
 				} else
-					System.out.println("Неверный количество дней в месяце");
+					System.out.println("Неверное количество дней в месяце");
 			
 				
 				
@@ -236,6 +230,7 @@ public class Shkurenko_5_2 {
 	}
 }
 */
+		/*
 		// 10. Написать программу, которая предлагает пользователю выбрать
 		// животное из списка (1 – кошка, 2 – собака и тд.), и в ответ
 		// показывает, какие звуки издаёт выбранное животное. В списке должно
@@ -306,14 +301,44 @@ public class Shkurenko_5_2 {
 		}else
 				System.out.println("животных у нас может быть от 1 до 13");
 			}
-		
-		
+		*/
+		/*
 		// 11. Написать игру "О, счастливчик!". На экране по очереди появляются
 		// вопросы, и варианты ответов. Неправильный выбор - игра окончена.
 		// Правильный ответ – переходим к следующему вопросу. Если все ответы
 		// правильные – в конце выводится сообщение о победе. По желанию можно
 		// реализовать несгораемые суммы, подсказки, работу с файлами, звуковые
 		// эффекты и тд.
+		System.out.println("Мы начинаем игру \"О, счастливчик\"");
+		System.out.println("");
+		System.out.println("И так первый вопрос");
+		System.out.println("");
+		System.out.println("Сколько будет \"2 + 2 * 2\"");
+		System.out.println("");
+		System.out.println("Выбирети ответ:");
+		System.out.println("1)2");
+		System.out.println("2)8");
+		System.out.println("3)6");
+		System.out.println("4)4");
+		int vopros1 = sc.nextInt();
+		String otvet;
+		if (vopros1 >= 1 && vopros1 <=4){
+			switch (vopros1){
+			case 1: 
+				otvet = "не угадали";
+			break;
+			case 2: 
+				otvet = "не угадали";
+			break;
+			case 3: 
+				otvet = "Ура вы выиграли";
+			break;
+			case 4: 
+				otvet = "не угадали";
+			break;
+			}
+		}
+		*/
 		// 12. Пользователь вводит с клавиатуры количество градусов по Цельсию,
 		// которое соответствует предполагаемой температуре за окном. Программа
 		// сообщает, тепло сейчас или холодно, жарко или мороз, а также
@@ -352,8 +377,10 @@ public class Shkurenko_5_2 {
 		// например. Зациклить работу приложения. Игра заканчивается поражением,
 		// если деньги закончились. Игра заканчивается победой, если выпадает
 		// джек-пот (7 7 7).
-	
+	}
+
+
 
 	
-	}
+	
 
