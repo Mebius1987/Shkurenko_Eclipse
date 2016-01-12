@@ -120,7 +120,7 @@ public class Shkurenko_5_2 {
 			System.out.println("Билет у нас имеет 6 цифр");
 			*/
 			
-		
+		/*
 		// 6. Указать с клавиатуры пол и возраст человека. Определить, пора ли
 		// ему на пенсию.
 		System.out.println("Введите пол человека f(female) или m(man)");
@@ -132,7 +132,7 @@ public class Shkurenko_5_2 {
 			} else 
 				System.out.println("уже пора на пенсию");
 		}
-		
+		*/
 		/*
 		// 7. Вводится время (часы и минуты) – программа выводит приветствие,
 		// соответствующее введённому времени (например, ввели 15 часов 6 минут
@@ -302,7 +302,7 @@ public class Shkurenko_5_2 {
 				System.out.println("животных у нас может быть от 1 до 13");
 			}
 		*/
-		/*
+		
 		// 11. Написать игру "О, счастливчик!". На экране по очереди появляются
 		// вопросы, и варианты ответов. Неправильный выбор - игра окончена.
 		// Правильный ответ – переходим к следующему вопросу. Если все ответы
@@ -321,24 +321,53 @@ public class Shkurenko_5_2 {
 		System.out.println("3)6");
 		System.out.println("4)4");
 		int vopros1 = sc.nextInt();
-		String otvet;
-		if (vopros1 >= 1 && vopros1 <=4){
+		String otvet = null;
+		//if (vopros1 >= 1 && vopros1 <=4){
 			switch (vopros1){
 			case 1: 
+			case 2:
+			case 4: 
 				otvet = "не угадали";
-			break;
-			case 2: 
-				otvet = "не угадали";
-			break;
+				System.out.println("вы проиграли к сожелению");
+			return;
 			case 3: 
 				otvet = "Ура вы выиграли";
 			break;
-			case 4: 
-				otvet = "не угадали";
-			break;
-			}
-		}
-		*/
+			default:
+				System.out.println("вы выбрали не существующий ответ");
+				return;
+
+			}			System.out.println(otvet);
+		
+		System.out.println("Сколько будет \"2 + 2");
+		System.out.println("");
+		System.out.println("Выбирети ответ:");
+		System.out.println("1)1");
+		System.out.println("2)2");
+		System.out.println("3)3");
+		System.out.println("4)4");
+		int vopros2 = sc.nextInt();
+		switch (vopros2){
+		case 1: 
+		case 2:
+		case 3: 
+			otvet = "не угадали";
+			System.out.println("вы проиграли к сожелению");
+		return;
+		case 4: 
+			otvet = "Ура вы выиграли";
+		break;
+		default:
+			System.out.println("вы выбрали не существующий ответ");
+			return;
+		}			System.out.println(otvet);
+		
+	}
+}
+
+
+		
+		
 		// 12. Пользователь вводит с клавиатуры количество градусов по Цельсию,
 		// которое соответствует предполагаемой температуре за окном. Программа
 		// сообщает, тепло сейчас или холодно, жарко или мороз, а также
@@ -377,7 +406,7 @@ public class Shkurenko_5_2 {
 		// например. Зациклить работу приложения. Игра заканчивается поражением,
 		// если деньги закончились. Игра заканчивается победой, если выпадает
 		// джек-пот (7 7 7).
-	}
+	
 
 
 
