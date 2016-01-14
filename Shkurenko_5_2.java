@@ -5,6 +5,7 @@ import java.math.RoundingMode;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Shkurenko_5_2 {
@@ -339,7 +340,7 @@ public class Shkurenko_5_2 {
 
 			}			System.out.println(otvet);
 		
-		System.out.println("Сколько будет \"2 + 2");
+		System.out.println("Сколько будет \"2 + 2\"");
 		System.out.println("");
 		System.out.println("Выбирети ответ:");
 		System.out.println("1)1");
@@ -362,12 +363,102 @@ public class Shkurenko_5_2 {
 			return;
 		}			System.out.println(otvet);
 		
-	}
-}
-*/
+		System.out.println("Когда обычно бывает снег в Одессе");
+		System.out.println("");
+		System.out.println("Выбирети ответ:");
+		System.out.println("1)Лето");
+		System.out.println("2)Зима");
+		System.out.println("3)Осень");
+		System.out.println("4)Весна");
+		int vopros3 = sc.nextInt();
+		switch (vopros3){
+		case 1: 
+		case 4:
+		case 3: 
+			otvet = "не угадали";
+			System.out.println("вы проиграли к сожелению");
+		return;
+		case 2: 
+			otvet = "Ура вы выиграли";
+		break;
+		default:
+			System.out.println("вы выбрали не существующий ответ");
+			return;
+		}			System.out.println(otvet);
+		
+		System.out.println("Можно ли получать энергию от удара молнии?");
+		System.out.println("");
+		System.out.println("Выбирети ответ:");
+		System.out.println("1)Да");
+		System.out.println("2)Нет");
+		System.out.println("3)Это фантастика");
+		System.out.println("4)Дома каждый день получаю");
+		int vopros4 = sc.nextInt();
+		switch (vopros4){
+		case 2: 
+		case 4:
+		case 3: 
+			otvet = "не угадали";
+			System.out.println("вы проиграли к сожелению");
+		return;
+		case 1: 
+			otvet = "Ура вы выиграли";
+		break;
+		default:
+			System.out.println("вы выбрали не существующий ответ");
+			return;
+		}			System.out.println(otvet);
 
+		System.out.println("Будет ли металлическая пластинка в моей голове притягиваться к магнитам?");
+		System.out.println("");
+		System.out.println("Выбирети ответ:");
+		System.out.println("1)Да");
+		System.out.println("2)Нет");
+		System.out.println("3)Это фантастика");
+		System.out.println("4)Да постоянно страдаю от этого");
+		int vopros5 = sc.nextInt();
+		switch (vopros5){
+		case 2: 
+		case 4:
+		case 3: 
+			otvet = "не угадали";
+			System.out.println("вы проиграли к сожелению");
+		return;
+		case 1: 
+			otvet = "Ура вы выиграли";
+		break;
+		default:
+			System.out.println("вы выбрали не существующий ответ");
+			return;
+		}			System.out.println(otvet);
+		
+		System.out.println("Если человек говорит сам с собой, он безумен?");
+		System.out.println("");
+		System.out.println("Выбирети ответ:");
+		System.out.println("1)Да");
+		System.out.println("2)Нет");
+		System.out.println("3)Это калькулятор умеет тоже");
+		System.out.println("4)Нет, данный феномен известен как «речь для себя». Люди часто говорят сами с собой вслух, когда находятся в состоянии стресса или в одиночестве, и это абсолютно естественно.");
+		int vopros6 = sc.nextInt();
+		switch (vopros6){
+		case 2: 
+		case 1:
+		case 3: 
+			otvet = "не угадали";
+			System.out.println("вы проиграли к сожелению");
+		return;
+		case 4: 
+			otvet = "Ура вы выиграли";
+		break;
+		default:
+			System.out.println("вы выбрали не существующий ответ");
+			return;
+		}			System.out.println(otvet);
 		
 		
+
+		*/
+		/*
 		// 12. Пользователь вводит с клавиатуры количество градусов по Цельсию,
 		// которое соответствует предполагаемой температуре за окном. Программа
 		// сообщает, тепло сейчас или холодно, жарко или мороз, а также
@@ -404,6 +495,79 @@ public class Shkurenko_5_2 {
 		// вопрос. Программа выдаёт случайный ответ из набора заранее
 		// предусмотренных ответов (5 положительных, 5 отрицательных, 10
 		// нейтральных вариантов).
+		System.out.println("Вас преветствует программа предсказатель 0.1");
+		System.out.println("Введите вопрос");
+		String	vopros = sc.nextLine();
+		Random r = new Random();
+		int c = r.nextInt(19) + 1;
+		switch (c){
+			case 1:
+				System.out.println("Удовольствие будет безгранично");
+				break;
+			case 2:
+				System.out.println("Радостно будет всем");
+				break;
+			case 3:
+				System.out.println("Ликование победы будет продолжительным");
+				break;
+			case 4:
+				System.out.println("Восторг от проделанной работы будет невероятным");
+				break;
+			case 5:
+				System.out.println("Уважение добьетесь сегодня");
+				break;
+			case 6:
+				System.out.println("Горе будет с теми кто сегодня будет что-то делать");
+				break;
+			case 7:
+				System.out.println("Отчаяние поглатит Вас");
+				break;
+			case 8:
+				System.out.println("Огорчение из-за нерешенных задач");
+				break;
+			case 9:
+				System.out.println("Тревога за вашего любимца не напрасна");
+				break;
+			case 10:
+				System.out.println("Скука будет сегодня весь день");
+				break;
+			case 11:
+				System.out.println("Любопытство ваше может сыграть с вами злую шутку");
+				break;
+			case 12:
+				System.out.println("В эти лунные сутки может возникнуть соблазн");
+				break;
+			case 13:
+				System.out.println("Ваш ждет обычный день");
+				break;
+			case 14:
+				System.out.println("Ваш ждет путешествие");
+				break;
+			case 15:
+				System.out.println("Помечтайте о дальних странах");
+				break;
+			case 16:
+				System.out.println("Этот день принесет Вам подсказку");
+				break;
+			case 17:
+				System.out.println("К этому дню надо отнестись нейтрально");
+				break;
+			case 18:
+				System.out.println("Задумайтесь над прошлым днем");
+				break;
+			case 19:
+				System.out.println("Главное правило этого дня прислушатесь к своей интуиции");
+				break;
+			case 20:
+				System.out.println("Правильно оцените происходящее вокруг");
+				break;
+			default:
+				System.out.println("вы выбрали не существующий ответ");
+				return;
+			}	
+				
+				
+		*/
 		// 14. Реализовать программу-лотерею. Программа загадывает 5
 		// (неповторяющихся) чисел в диапазоне от 1 до 42, но не показывает их
 		// на экран. Пользователь пытается их угадать – вводит каких-то 5 чисел
@@ -434,8 +598,8 @@ public class Shkurenko_5_2 {
 		// если деньги закончились. Игра заканчивается победой, если выпадает
 		// джек-пот (7 7 7).
 	}
-	}
 }
+
 
 
 
