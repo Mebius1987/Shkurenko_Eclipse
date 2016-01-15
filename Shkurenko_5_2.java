@@ -175,62 +175,50 @@ public class Shkurenko_5_2 {
 		}else
 			System.out.println("рост и вес не могут быть отрицательными");
 			*/
-		/*
+		
 		// 9. Ввести любую дату (день, месяц и год вводятся по отдельности).
 		// Проверить корректность введённых значений. Вывести дату следующего
 		// дня (использовать стандартные встроенные классы Java вроде
 		// GregorianCalendar запрещено!)
-		System.out.println("Введите год");
-		int god = sc.nextInt();
-		System.out.println("Введите месяц");
-		int mes = sc.nextInt();
-		System.out.println("Введите день");
-		int den = sc.nextInt();
-		if (mes > 0 && mes <= 12){
-			if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 ){
-				if(den == 31){
-					System.out.println("1." + (mes+1) + "." + god );
-				} else if (den <= 31){
-					System.out.println((den +1) + "." + mes + "." + god);
-				} else
-					System.out.println("Неверное количество дней в месяце");
-					
-				} else if (mes == 4 || mes == 6 || mes == 9 || mes == 11){
-					if(den == 30){
-						System.out.println("1." + (mes+1) + "." + god );	
-					} else if (den <= 30){
-						System.out.println((den +1) + "." + mes + "." + god);
-					} else
-						System.out.println("Неверное количество дней в месяце");
-				} else if (mes == 2){
-					if (((god % 4 == 0) && !(god % 100 == 0)) || (god % 400 == 0)){
-						if (den == 29){
-							System.out.println("1." + (mes+1) + "." + god );
-						} else if (den <= 29){
-							System.out.println((den +1) + "." + mes + "." + god);
-						} else if (den == 28){
-							System.out.println("1." + (mes+1) + "." + god );
-						} else if (den <= 28){
-							System.out.println((den +1) + "." + mes + "." + god);
-						} else 
-							System.out.println("Неверное количество дней в месяце");
-					}
-				} else if (mes == 12){
-					if(den == 31){
-						System.out.println("1." + ("1.") + (god + 1) );
-					} else if (den <= 31){
-						System.out.println((den +1) + "." + mes + "." + god);
-				} else
-					System.out.println("Неверное количество дней в месяце");
-			
-				
-				
-			
+		System.out.println("Enter day");
+			int den = sc.nextInt();
+			System.out.println("Enter month");
+			int mes = sc.nextInt();
+			System.out.println("Enter year");
+			int god = sc.nextInt();
+			if ((den > 0 && den <= 31) && (mes > 0 && mes <= 12) && god > 0) {
+				if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+					den = (den % 30) + 1;
+					System.out.print(den);
+				} else if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
+					den = (den % 31) + 1;
+					System.out.print(den);
+				} else if (mes == 2 && (((god % 4 == 0) && !(god % 100 == 0)) || (god % 400 == 0))) {
+					den = (den % 29) + 1;
+					System.out.print(den);
+				} else if (mes == 2) {
+					den = (den % 28) + 1;
+					System.out.print(den);
+				}
+				if (den == 1) {
+					mes = (mes % 12) + 1;
+					System.out.print("." + mes);
+				} else {
+					System.out.print("." + mes);
+				}
+				if (den == 1 && mes == 1) {
+					god = god + 1;
+					System.out.print("." + god);
+				} else {
+					System.out.print("." + god);
+				}
+			} else {
+				System.out.println("Wrong format!");
 			}
 		}
-	}
-}
-*/
+	
+
+
 		/*
 		// 10. Написать программу, которая предлагает пользователю выбрать
 		// животное из списка (1 – кошка, 2 – собака и тд.), и в ответ
@@ -611,19 +599,25 @@ public class Shkurenko_5_2 {
 			System.out.println("Рыбы.\nОбщий гороскоп на эту неделю ");
 			System.out.println("Начало недели внесет некоторый дисбаланс в отношения. Причина тому - отсутствие взаимопонимания. Что касается профессиональной жизни, настаивайте на своем, даже если начальство проявит категорическое несогласие. Удача окажется на Вашей стороне. Просто проявляйте больше дипломатии и тактики - тщательно выбирайте выражения. В середине недели друг попросит Вас о помощи - не отказывайте ему. Ответная благодарность невероятно согреет Вашу душу теплом. На выходных не сдерживайте своего желания приобрести какой-то пустяк. Вы это заслужили.");
 		}
-		*/
+		
+		
 		//15.Валера купил N куриц по M гривен за одну курицу. Каждая курица несёт по X яиц в неделю. Валера решил открыть свой бизнес и стал продавать яйца, которые несут курицы. За сколько дней окупятся куры, если продавать яйца по Z гривен за десяток (с учётом НДС, но без учёта сбора в ПФ)? Сроком жизни куриц, влажностью воздуха в курятнике, а также скоростью ветра и фазами луны можно пренебречь.
 		System.out.println("Сколько у Вас купленно куриц");
 		int N = sc.nextInt();
 		System.out.println("Сколько вы заплатили за одну курицу");
-		int M = sc.nextInt();
+		double M = sc.nextDouble();
 		System.out.println("Сколько яиц несет курица в неделю");
 		int X = sc.nextInt();
 		System.out.println("Сколько стоит десяток яиц");
-		int Z = sc.nextInt();
-		
+		double Z = sc.nextDouble();
+		double den = X / 7;//skolko 9ic neset kyrica v den'
+		*/
+		  
+			
+		}
+	
 	}
-}
+
 
 
 
