@@ -241,27 +241,27 @@ public class Shkurebko_6 {
 			while(nomer != 0){
 				shest = nomer % 16;
 				switch (shest){
-				case 11: 
+				case 10: 
 					temp2 = "A";
 					temp = temp2 + temp;
 				break;
-				case 12: 
+				case 11: 
 					temp2 = "B";
 					temp = temp2 + temp;
 				break;
-				case 13: 
+				case 12: 
 					temp2 = "C";
 					temp = temp2 + temp;
 				break;
-				case 14: 
+				case 13: 
 					temp2 = "D";
 					temp = temp2 + temp;
 				break;
-				case 15: 
+				case 14: 
 					temp2 = "E";
 					temp = temp2 + temp;
 				break;
-				case 16: 
+				case 15: 
 					temp2 = "F";
 					temp = temp2 + temp;
 				break;
