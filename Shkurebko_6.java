@@ -227,16 +227,50 @@ public class Shkurebko_6 {
 			nomer /= 2;
 		}System.out.print(temp);
 		} else if (sist == 2){
-			int dvoic = 0;
+			int vosm = 0;
 			String temp = "";
 			while(nomer != 0){
-				dvoic = nomer % 8;
-				temp = dvoic + temp;
+				vosm = nomer % 8;
+				temp = vosm + temp;
 				nomer /= 8;
 			}System.out.print(temp);
 		} else if (sist == 3){
+			int shest = 0;
+			String temp = "";
+			String temp2 = "";
+			while(nomer != 0){
+				shest = nomer % 16;
+				switch (shest){
+				case 11: 
+					temp2 = "A";
+					temp = temp2 + temp;
+				break;
+				case 12: 
+					temp2 = "B";
+					temp = temp2 + temp;
+				break;
+				case 13: 
+					temp2 = "C";
+					temp = temp2 + temp;
+				break;
+				case 14: 
+					temp2 = "D";
+					temp = temp2 + temp;
+				break;
+				case 15: 
+					temp2 = "E";
+					temp = temp2 + temp;
+				break;
+				case 16: 
+					temp2 = "F";
+					temp = temp2 + temp;
+				break;
+				}
+				temp = shest + temp;
+				nomer /= 16;
+			}System.out.print(temp);
 			
-		}
+			}
 		//16.	Реализовать игровую программу «Однорукий бандит» (игровой автомат). В начале игры пользователю выдаётся 5000 кредитов. Случайным образом на барабанчиках выпадает три значения от 0 до 7. Призовые комбинации: 0 0 0, 1 1 1, 2 2 2, 3 3 3, 4 4 4, 5 Х Х, 5 5 Х, 5 5 5, 7 Х Х, 7 7 Х, 7 7 7 (на месте Х может быть любая цифра). Штрафная комбинация: 6 6 6. Все остальные комбинации нейтральные. В любом случае, за показ новой комбинации с игрового счёта пользователя снимается определённая фиксированная сумма денег. Необходимо назначить различные вознаграждения за выпадение призовых комбинаций. Комбинации можно показывать через JOptionPane.showMessageDialog, например. Зациклить работу приложения. Игра заканчивается поражением, если деньги закончились. Игра заканчивается победой, если выпадает джек-пот (7 7 7).
 		/*
 		int bet = 20;
