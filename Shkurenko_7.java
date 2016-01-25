@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Shkurenko_7 {
 
 	public static void main(String[] args) {
-		task8();
+		task6();
 	}
 
 	public static void task1() {
@@ -134,6 +134,17 @@ public class Shkurenko_7 {
 			}
 			System.out.println();
 		}
+		
+		for (int y = 0; y < h; y++) {
+			for (int x = 0; x < a; x++) {
+				if (x == h-1||x - y == h - 1 ) {
+					System.out.print("*");
+				} else
+					System.out.print(" ");
+			}
+			System.out.println();
+		}
+		
 	}
 
 	public static void task7() {
@@ -153,14 +164,13 @@ public class Shkurenko_7 {
 		}
 		System.out.println(start);// определили сколько цифр
 		while (number > start) {
-			if ((int)(number / Math.pow(10, start - 1)) == (number % 10)) {
+			if ((int) (number / Math.pow(10, start - 1)) == (number % 10)) {
 				System.out.println("Число " + number + " является палиндромом");
 			} else
 				System.out.println("Число " + number + " не является палиндромом");
 			number /= 10;
-			number = (int) (number % Math.pow(10, start - starti));
-			
-
+			number = (int) (number % (Math.pow(10, start - starti)));
+			System.out.println("");
 		}
 	}
 
