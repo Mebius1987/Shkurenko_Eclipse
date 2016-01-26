@@ -134,17 +134,15 @@ public class Shkurenko_7 {
 			}
 			System.out.println();
 		}
-		
-		for (int y = 0; y < h; y++) {
-			for (int x = 0; x < a; x++) {
-				if (x == h-1||x - y == h - 1 ) {
+		for (int y = h - 2; y >= 0; y--) {
+			for (int x = a - 1; x >= 0; x--) {
+				if (x + y == h - 1 || x - y == h - 1) {
 					System.out.print("*");
 				} else
 					System.out.print(" ");
 			}
 			System.out.println();
 		}
-		
 	}
 
 	public static void task7() {
